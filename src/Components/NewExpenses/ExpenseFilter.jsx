@@ -15,7 +15,7 @@ const ExpenseFilter = (props) => {
         console.log("inside child", selectedYear);
     };
     return (
-        <Card className="expenses">
+        <Card>
             <div className="expenses-filter">
                 <div className="expenses-filter__control">
                     <label>Filter by year</label>
