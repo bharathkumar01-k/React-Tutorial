@@ -3,6 +3,7 @@ import { useState } from "react";
 import ExpenseFilter from "../NewExpenses/ExpenseFilter";
 import Card from "../UI/Card";
 import "./Expenses.css";
+import ExpenseChart from "./ExpenseChart";
 
 const Expenses = (props) => {
     console.log("here in expenses.jsx");
@@ -18,6 +19,7 @@ const Expenses = (props) => {
     return (
         <Card className="expenses">
             <ExpenseFilter onSelectedYear={selectYearHandler} />
+            <ExpenseChart expenses={filteredExpenses} />
             {filteredExpenses.length === 0 ? (
                 <p>No Expenses Found...</p>
             ) : (
